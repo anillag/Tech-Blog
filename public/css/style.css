@@ -1,3 +1,14 @@
+:root {
+  --background: #333333;
+  --text-color: #ffffff;
+  --border: #cccccc;
+  --comment-bg: #2a2626;
+  --link-color: #dfeb34;
+  --link-hover: #98a322;
+  --delete-color: #d41414;
+  --delete-hover: #ff643d;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,25 +19,26 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  background-color: var(--background);
+  color: var(--text-color);
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: var(--link-color);
   font-weight: bold;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: var(--link-hover);
 }
 
 button {
-  background-color: #225ca3;
+  background-color: var(--link-color);
   border: 0;
   padding: 1%;
-  color: white;
+  color: var(--background);
   font-weight: bold;
   transition: background-color 0.1s;
   cursor: pointer;
@@ -34,7 +46,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: var(--link-hover);
 }
 
 .post-list {
@@ -46,13 +58,13 @@ textarea,
 input {
   padding: 0.5%;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
 }
 
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid var(--link-hover);
 }
 
 textarea {
@@ -78,15 +90,11 @@ form label {
 }
 
 header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-}
-
-header h1 {
-  font-size: 1em;
 }
 
 main {
@@ -100,7 +108,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: var(--link-color);
   font-size: 100%;
   font-weight: bold;
   transition: color 0.1s;
@@ -109,15 +117,15 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: var(--link-hover);
 }
 
 .delete-post-btn {
-  background-color: #d41414;
+  background-color: var(--delete-color);
 }
 
 .delete-post-btn:hover {
-  background-color: #ff643d;
+  background-color: var(--delete-hover);
 }
 
 .post {
@@ -136,15 +144,6 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
 .comment-form {
   margin-bottom: 5%;
 }
@@ -155,7 +154,7 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: var(--comment-bg);
 }
 
 .comment .meta {
@@ -173,7 +172,7 @@ main {
 }
 
 footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border);
   display: flex;
   justify-content: center;
   padding: 1%;
